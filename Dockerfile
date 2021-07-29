@@ -3,7 +3,7 @@
 # Environment: Java
 # Minimum Panel Version: 0.6.0
 # ----------------------------------
-FROM 17-jdk-alpine3.14
+FROM java:17-jdk-alpine3.14
 
 LABEL MAINTAINER="Pterodactyl Software, <brandonjohnflick@gmail.com>"
 
