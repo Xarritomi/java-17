@@ -5,7 +5,7 @@ cd /home/container
 java -version ## only really needed to show what version is being used. Should be changed for different applications
 
 # Replace Startup Variables
-MODIFIED_STARTUP=`java -Xms128M -Xmx{{SERVER_MEMORY}}M -Dterminal.jline=false -Dterminal.ansi=true -jar {{SERVER_JARFILE}}`
+MODIFIED_STARTUP=`eval echo $(echo ${STARTUP} | sed -e 's/{{/${/g' -e 's/}}/}/g')`
 echo ":/home/container$ ${MODIFIED_STARTUP}"
 
 # Run the Server
